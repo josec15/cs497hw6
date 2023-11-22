@@ -10,3 +10,8 @@ Space complexity = O(n + m), n represents number of edges and m represents numbe
 
 ## Question 2
 
+
+## Question 3
+For this problem, we begin by creating an adjacency list that represents the graph and populates the list with a for loop that iterates over the connections list and adds both city1 and city2 and the costs. Then we initialize a total cost, prioritu queue and visited set for all visited cities to avoid loops. The main while loop will continue as long as the priority queue is not empty. While not empty, we pop the minimum cost element from the pq and if the current city has not been visited we want to add it to the visited set and add the cost to the total cost. Once all cities have been visited, we want to return the total cost. We also want to push the neighbor of the current city to the priority queue and will loop back to the top of the while loop until all cities have been visited. Return -1 if there are cities not visited which means it is not possible to connect all cities.
+Time complexity = O(mlogn), where m represents the number of cities and logn is the heap operations.
+Space complexity = O(m + n), since we create an adjacency list and visited set, and use a priority queue. 
